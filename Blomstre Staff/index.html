@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blomstre</title>
+    <!-- Importing high-end editorial and clean body fonts to match the original site -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbfa; /* Signature brand warm off-white background */
+            color: #1b4329; /* Deep forest green text */
+            min-height: 100vh;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e8e6e3;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            color: #1b4329;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #1b4329;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        /* --- Main Layout Container --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Hero Header Panel --- */
+        .hero {
+            text-align: center;
+            margin: 60px auto 45px auto;
+        }
+
+        .hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 56px;
+            font-weight: 400;
+            color: #1b4329;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #556b5c;
+            font-weight: 300;
+        }
+
+        /* --- Dashboard Grid Cards --- */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #1b4329; /* High-contrast rich forest green background card panels */
+            border-radius: 16px; /* Smooth elegant curves */
+            padding: 45px 30px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s;
+            box-shadow: 0 4px 15px rgba(27, 67, 41, 0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(27, 67, 41, 0.18);
+        }
+
+        /* Automatically processes and applies an elegant white coloring onto your local dark asset png icons */
+        .card img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 25px;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        }
+
+        .card h2 {
+            font-family: 'Instrument Serif', serif;
+            color: #fcfbfa; /* Warm off-white title header element */
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: #c9d6cd; /* Soft sage green description text */
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">🕯 BLOMSTRE</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="staff.html">Staff</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome</h1>
+            <p>Ready to brighten someone's day?</p>
+        </div>
+
+        <!-- Dashboard Grid System -->
+        <div class="cards">
+            <!-- Staff Card using local assets -->
+            <a href="staff.html" class="card">
+                <img src="assets/images/staff.png" alt="Staff">
+                <h2>Staff</h2>
+                <p>Clock In / Clock Out</p>
+            </a>
+
+            <!-- Shop Card linking out to Shopify using local assets -->
+            <a href="https://YOUR-SHOPIFY-STORE.myshopify.com" target="_blank" class="card">
+                <img src="assets/images/shop.png" alt="Shop">
+                <h2>Shop</h2>
+                <p>Visit Blomstre Store</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

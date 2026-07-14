@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login</title>
+    <!-- Importing high-end editorial and clean body fonts to match the brand -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbfa; /* Warm off-white brand background */
+            color: #1b4329; /* Deep forest green text */
+            min-height: 100vh;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e8e6e3;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            color: #1b4329;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #1b4329;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        /* --- Main Content Center Layout --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .login-box {
+            max-width: 400px;
+            margin: 80px auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-box h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
+            font-weight: 400;
+            color: #1b4329;
+            margin-bottom: 30px;
+        }
+
+        /* --- Passcode Entry Spans Layout --- */
+        .pin-display {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        /* Styling empty box structures for passcode spans */
+        .pin-display span {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            display: inline-block;
+            transition: background-color 0.15s ease;
+        }
+
+        /* Target class layout hook to style filled dots via javascript */
+        .pin-display span.filled {
+            background-color: #1b4329;
+        }
+
+        /* --- Numeric Keypad Grid --- */
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 75px);
+            gap: 20px;
+        }
+
+        .keypad button {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            font-size: 24px;
+            color: #1b4329;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.1s, transform 0.1s;
+            box-shadow: 0 2px 8px rgba(27, 67, 41, 0.03);
+        }
+
+        .keypad button:active {
+            background-color: #f4f3f0;
+            transform: scale(0.96);
+        }
+
+        /* Action layout buttons coloring overrides */
+        .keypad button:nth-child(10) { color: #7f8c8d; } /* Backspace */
+        .keypad button:nth-child(12) { color: #2ecc71; font-weight: bold; } /* Checkmark */
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                🕯 BLOMSTRE
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="login-box">
+            <h1>Staff Login</h1>
+
+            <!-- Your passcode entry tracking wrapper -->
+            <div class="pin-display">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Modern centered touch layout keypad -->
+            <div class="keypad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+
+                <button>⌫</button>
+                <button>0</button>
+                <button>✓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your external script handlers -->
+    <script src="js/api.js"></script>
+    <script src="js/staff.js"></script>
+</body>
+</html>
